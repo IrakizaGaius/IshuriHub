@@ -24,15 +24,18 @@ Ishuri Hub simplifies school operations by offering real-time updates, analytics
 ## ⚙️ System Requirements
 
 ### Backend
+
 - **Node.js** (v16+)
 - **Express.js**
 - **MySQL Database**
 
 ### Frontend
+
 - **React.js**
 - **React Router**
 
 ### Environment
+
 - `.env` file for secure configurations
 
 ---
@@ -40,6 +43,7 @@ Ishuri Hub simplifies school operations by offering real-time updates, analytics
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
+
 - Install **Node.js** and **npm**.
 - Install and configure **MySQL**.
 - Install **Git** for cloning the repository.
@@ -49,11 +53,13 @@ Ishuri Hub simplifies school operations by offering real-time updates, analytics
 ### Backend Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/your-repo/IshuriHub.git
    cd IshuriHub/backend
    
 2. **Install dependencies**:
+
    ```bash
    npm install
 
@@ -70,19 +76,20 @@ MTN_CLIENT_SECRET=your_client_secret
 JWT_SECRET=your_jwt_secret
 
 ```
-4. **Run database migrations**:
+
+4.**Run database migrations**:
 
 ```bash
 npx sequelize-cli db:migrate
 ```
 
-5. **Start the backend server**:
+5.**Start the backend server**:
 
 ```bash
 npm start
 ```
 
-**Frontend Installation**
+### Frontend Installation
 
 1. **Navigate to the frontend folder**:
 
@@ -90,13 +97,13 @@ npm start
 cd ../frontend
 ```
 
-2. **Install dependencies**:
+2.**Install dependencies**:
 
 ```bash
 npm install
 ```
 
-3. **Start the frontend application**:
+3.**Start the frontend application**:
 
 ```bash
 npm start
@@ -111,9 +118,10 @@ Accessing the System
 3. **Notifications**: Send real-time updates to parents.
 4. **Reports**: Generate insights into attendance, grades, and other metrics.
 
-**Default API Routes**
+### Default API Routes
 
 **Public Routes**:
+
 1. **/api/users**: User registration and login
 
 **Protected Routes (Require Authentication)**:
@@ -134,8 +142,9 @@ We welcome contributions to improve Ishuri Hub! Here's how you can contribute:
 1. **Fork the repository**.
 
 2. **Create a feature branch**:
+
 ```bash
 git checkout -b feature-name
 ```
 
-3. **Submit a pull request for review**.
+3.**Submit a pull request for review**.
