@@ -16,7 +16,7 @@ const { authenticate, authorize } = require('./middleware/auth');
 const app = express();
 
 const corsOptions = {
-    origin: 'https://ishurihub-1.onrender.com', 
+    origin: '*', 
   };
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
