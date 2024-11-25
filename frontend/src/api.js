@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://ishurihub.onrender.com';
 
 const getToken = () => {
   return localStorage.getItem('token');
