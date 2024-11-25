@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendPasswordResetEmail = async (email, token) => {
-  const resetUrl = `https://ishurihub.onrender.com/api/users/reset-password?token=${token}`;
+  const resetUrl = `ishurihub-production.up.railway.app/api/users/reset-password?token=${token}`;
   const mailOptions = {
     to: email,
     from: process.env.EMAIL_USER,
@@ -30,7 +30,7 @@ const sendPasswordResetEmail = async (email, token) => {
   }
 };
 const sendEmailVerification = async (email, token) => {
-  const verificationUrl = `https://ishurihub.onrender.com/api/users/verify-email?token=${token}`;
+  const verificationUrl = `ishurihub-production.up.railway.app/api/users/verify-email?token=${token}`;
   const mailOptions = {
     to: email,
     from: process.env.EMAIL_USER,
