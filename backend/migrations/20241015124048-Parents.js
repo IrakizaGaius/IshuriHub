@@ -16,11 +16,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      status: {
-        type: Sequelize.ENUM,
-        values: ['ACTIVE', 'DELETED'],
-        allowNull: false
-      },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
