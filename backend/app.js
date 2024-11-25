@@ -15,7 +15,10 @@ const { authenticate, authorize } = require('./middleware/auth');
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: 'https://ishurihub-1.onrender.com', 
+  };
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Public routes
