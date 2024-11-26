@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faTrash, faDownload, faUserXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBell, faUsers, faGraduationCap, faCalendarAlt, faUserCheck, faBars, faDashboard, faSignOut, faCog } from '@fortawesome/free-solid-svg-icons';
 import './Students.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { addStudent, getStudentsMetrics, getStudents, deleteStudent, updateStudent,logout} from '../api';
 
 // Retrieve user data from localStorage
