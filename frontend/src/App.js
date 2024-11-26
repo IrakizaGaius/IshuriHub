@@ -14,10 +14,10 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<IndexPage />} />
-        <Route path="/dashboard/*" element={<Dashboard />} />
-        <Route path="/parents/*" element={<Parents />} />
-        <Route path="/events/*" element={<Events />} />
-        <Route path="/students/*" element={<Students />} />
+        <Route path="/dashboard/" element={<Dashboard />} />
+        <Route path="/parents/" element={<Parents />} />
+        <Route path="/events/" element={<Events />} />
+        <Route path="/students/" element={<Students />} />
         <Route path="/student/:id" element={<StudentDetails />} />
         <Route path="/config" element={<Config />} />
       </Routes>
