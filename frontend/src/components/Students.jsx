@@ -284,7 +284,6 @@ const clearFilters = () => {
   <div className="students-menu-icons">
   <ul>
         <li><Link to="/dashboard"><FontAwesomeIcon icon={faDashboard} className="Dashboard-icon" /> {menuOpen && <span>Dashboard</span>}</Link></li>
-        <li><Link to="/notifications"><FontAwesomeIcon icon={faBell} className="Notifications-icon" /> {menuOpen && <span>Notifications</span>}</Link></li>
         <li><Link to="/students"><FontAwesomeIcon icon={faGraduationCap} className="Students-icon" /> {menuOpen && <span>Students</span>}</Link></li>
         <li><Link to="/events"><FontAwesomeIcon icon={faCalendarAlt} className="Events-icon" /> {menuOpen && <span>Events</span>}</Link></li>
         <li><Link to="/parents"><FontAwesomeIcon icon={faUsers} className="Student-icon" /> {menuOpen && <span>Student</span>}</Link></li>
