@@ -3,7 +3,7 @@ const router = express.Router();
 const { Event, Parent, sequelize} = require('../models');
 const { Sequelize, Op } = require('sequelize');
 const {ParentData} = require('../services/emailService');
-const {sendSms} = require('../services/smsService');
+
 
 
 // Helper function to update event status based on date
@@ -62,13 +62,8 @@ router.post('/', async (req, res) => {
       return ParentData(parent.email, subject, message);
     });
 
-        // Send SMS to parents
-        const sendSmsPromises = parents.map(parent => {
-          const smsMessage = `New Event: ${name}\nDescription: ${description}\nDate: ${date}\nPlease check your email for more details.`;
-          return sendSms(parent.phoneNumber, smsMessage);
-        });
 
-    await Promise.all([...sendEmailsPromises, ...sendSmsPromises]);
+    await Promise.all([...sendEmailsPromises]);
     await transaction.commit();
     res.status(201).json(event);
   } catch (error) {
