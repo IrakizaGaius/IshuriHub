@@ -603,8 +603,8 @@ const clearFilters = () => {
         <tr key={parent.id}>
           <td>{parent.name}</td>
           <td>{parent.phoneNumber}</td>
+          <td>{parent.email || 'N/A'}</td>
           <td>{parent.status}</td>
-          <td>{parent.email}</td>
           <td>{formatDate(parent.createdAt)}</td>
           <td>
             <FontAwesomeIcon
