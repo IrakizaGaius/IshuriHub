@@ -21,6 +21,12 @@ Ishuri Hub simplifies school operations by offering real-time updates, analytics
 
 ---
 
+## Deployed system Links
+
+- **Frontend** : Deployed using Render and it can be accessed here: <https://ishurihub-1.onrender.com>
+
+-**Backend** : Deployed using railway and can be accessed here: <https://ishurihub-production.up.railway.app>
+
 ## ⚙️ System Requirements
 
 ### Backend
