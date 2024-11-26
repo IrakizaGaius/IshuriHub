@@ -1,4 +1,4 @@
-const API_URL = 'ishurihub-production.up.railway.app';
+const API_URL = 'https://ishurihub-production.up.railway.app';
 
 const getToken = () => {
   return localStorage.getItem('token');
