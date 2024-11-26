@@ -12,6 +12,7 @@ const email = localStorage.getItem('email');
 
 
 const StudentsPage = () => {
+  const navigate = useNavigate();
   // State for storing students data
   const [students, setStudents] = useState([]);
   const sortedStudents = [...students].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
