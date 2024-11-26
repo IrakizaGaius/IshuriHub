@@ -12,6 +12,7 @@ const userRoutes = require('./routes/user');
 const eventRoutes = require('./routes/event');
 const termRoutes = require('./routes/term');
 const { authenticate, authorize } = require('./middleware/auth');
+const path = require('path');
 
 const app = express();
 
