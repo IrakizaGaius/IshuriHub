@@ -37,11 +37,11 @@ app.use('/api/events', authenticate, authorize(['School Admin', 'Teacher']), eve
 app.use('/api/terms', authenticate, authorize(['School Admin', 'Teacher']), termRoutes);
 
 
-app.use(express.static(path.join(__dirname, 'build')));
+//app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-});
+//app.get('*', (req, res) => {
+  //res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+//});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
