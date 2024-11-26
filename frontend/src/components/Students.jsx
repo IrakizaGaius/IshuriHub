@@ -254,7 +254,7 @@ const applyFilters = () => {
     filtered = students;
   }
 
-  // Date range filters
+
   if (dateRange.start) {
     filtered = filtered.filter(student => new Date(student.createdAt) >= new Date(dateRange.start));
   }
@@ -262,17 +262,21 @@ const applyFilters = () => {
     filtered = filtered.filter(student => new Date(student.createdAt) <= new Date(dateRange.end));
   }
 
-  setFilteredStudents(filtered); // Update state with filtered results
+  setFilteredStudents(filtered); 
   setFilterApplied(true);
 };
 
-// Clear filters
+
 const clearFilters = () => {
   setFilter('');
   setDateRange({ start: '', end: '' });
-  setFilteredStudents(students); // Reset to original data
+  setFilteredStudents(students); 
   setFilterApplied(false);
 };
+
+  const handleRowClick = (studentId) => {
+    navigate(`/student/${studentId}`);
+  };
 
   return (
     <div className="students-wrapper">
@@ -599,7 +603,7 @@ const clearFilters = () => {
   {filterApplied ? (
     filteredStudents.length > 0 ? (
       filteredStudents.map((student) => (
-        <tr key={student.id} onClick={() => window.location.href = `/student/${student.id}`}
+        <tr key={student.id} onClick={() => handleRowClick(student.id)}
         style={{ cursor: "pointer" }}>
           <td>{student.name}</td>
           <td>{student.Class}</td>
@@ -638,7 +642,7 @@ const clearFilters = () => {
   ) : (
     // Display all sorted students if no filter is applied
     sortedStudents.map((student) => (
-      <tr key={student.id} onClick={() => window.location.href = `/student/${student.id}`}
+      <tr key={student.id} onClick={() => handleRowClick(student.id)}
       style={{ cursor: "pointer" }}>
         <td>{student.name}</td>
         <td>{student.Class}</td>
